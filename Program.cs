@@ -14,10 +14,14 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddSingleton<IEnderecoService, EnderecoService>();
 builder.Services.AddSingleton<IBancoService, BancoService>();
+builder.Services.AddSingleton<IEmpresaService, EmpresaService>();
+builder.Services.AddSingleton<ITaxaService, TaxaService>();
 builder.Services.AddSingleton<IBrasilApi, BrasilApiRest>();
 
 builder.Services.AddAutoMapper(typeof(EnderecoMapping));
 builder.Services.AddAutoMapper(typeof(BancoMapping));
+builder.Services.AddAutoMapper(typeof(EmpresaMapping));
+builder.Services.AddAutoMapper(typeof(TaxaMapping));
 
 var app = builder.Build();
 
